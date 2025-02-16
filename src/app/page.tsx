@@ -1,16 +1,46 @@
 "use client";
 
+import HomeCardProject from "@/components/HomeCardProject";
 import Card from "@/components/Card";
 import { link } from "fs";
 
+import Projects from "./projects";
+
 export default function Home() {
   const images = [
-    { src: "/PDP.jpeg", name: "Steven Le Cam" , link: "https://www.linkedin.com/in/steven-le-cam/"},
-    { src: "/PharmInnovMockup.png", name: "PharmInnov" , link: "https://www.wikipedia.fr"},
-    { src: "/vercel.svg", name: "Vercel", link: "https://www.vercel.com"},
-    { src: "/window.svg", name: "Window" , link: "https://www.microsoft.com"},
-    { src: "/ComptoirMockup.png", name: "Comptoir de la Poste",  link: "https://www.comptoirdelaposte.fr"},
-    { src: "/DAGMockup.png", name: "Doc and Go" , link: "https://www.docandgo.fr"},
+    { src: "/react.svg", name: "React.js" , link: "https://react.dev/"},
+    { src: "/symfony.svg", name: "PHP Symfony" , link: "https://symfony.com/doc/current/index.html"},
+    { src: "/nextjs.svg", name: "Next.js", link: "https://nextjs.org/docs"},
+    { src: "/angular.svg", name: "Angular" , link: "https://angular.dev/"},
+    { src: "/tailwind.svg", name: "Tailwind",  link: "https://v2.tailwindcss.com/docs"},
+    { src: "/bootstrap.svg", name: "Bootstrap" , link: "https://getbootstrap.com/"},
+  ];
+
+  const homeProjects = [
+    {
+      title: "Comptoir de la Poste",
+      description:
+        "Site réalisé durant mon stage de deuxième année.",
+      image: "/ComptoirMockup.png",
+      link: "",
+      
+    },
+    {
+      title: "Doc and Go",
+      description:
+        "Site réalisé durant mon stage de deuxième année.",
+      image: "/DAGMockup.png",
+      link: "",
+      
+    },
+    {
+      title: "SAE 5.01 : PharmInnov",
+      description:
+        "Pharmacie en click and collect.",
+      image: "/PharmInnovMockup.png",
+      link: "",
+      
+    },
   ];
 
   return (
@@ -30,7 +60,7 @@ export default function Home() {
         Bienvenue sur mon Portfolio !
       </h1>
       <p className="text-lg text-gray-600 mt-4 max-w-2xl">
-        Bonjour ! Je m'appelle Steven Le Cam, j’ai 21 ans et je suis développeur
+        Bonjour ! Je m'appelle Steven Le Cam, j’ai 20 ans et je suis développeur
         full-stack. Passionné par le développement web, j'ai réalisé quelques
         travaux que j'aimerais vous montrer et vous expliquer. Mon portfolio met
         en avant mes projets, qui illustrent mon travail dans la création de
@@ -93,56 +123,43 @@ export default function Home() {
       <p className="text-lg text-gray-600 mt-4 max-w-2xl">
         Voici un aperçu de mes projets
       </p>
+      
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-6 place-items-center">
-        {/* Cartes projets */}
-        <div className="relative group w-[320px] h-[220px] rounded-xl overflow-hidden">
-          <img
-            src="/ComptoirMockup.png"
-            alt="Comptoir de la Poste"
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-        </div>
-
-        <div className="relative group w-[320px] h-[220px] rounded-xl overflow-hidden">
-          <img
-            src="/DAGMockup.png"
-            alt="Doc and Go"
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-        </div>
-
-        <div className="relative group w-[320px] h-[220px] rounded-xl overflow-hidden">
-          <img
-            src="/PharmInnovMockup.png"
-            alt="PharmInnov"
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-        </div>
+      {homeProjects.map((project, index) => (
+        <HomeCardProject key={index} title={project.title} description={project.description} image={project.image} link={project.link}/>
+      ))}
       </div>
 
       {/* Bouton Voir plus de projets */}
-      <a className="relative bg-blue-300 px-6 py-3 my-4 text-lg font-semibold text-white rounded-lg overflow-hidden group transition-all duration-500">
+      <a href="/projects" className="relative bg-blue-300 px-6 py-3 my-4 text-lg font-semibold text-white rounded-lg overflow-hidden group transition-all duration-500">
         <span className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-right bg-gradient-to-r from-blue-300 to-blue-500 transition-transform duration-500 ease-out"></span>
         <span className="relative z-20 block">Voir plus de projets</span>
       </a>
+      
+
+     
 
         <div className="flex flex-col items-center text-center py-10 relative">
       <h1 className="text-blue-400 text-4xl font-bold mt-6" id="projet">
         Mes Compétences
       </h1>
       {/* Carrousel infini sans animation */}
-      <div className="flex gap-4 mt-10">
+      <div className="flex flex-col lg:flex-row gap-4 mt-10">
       
-        {images.map((image, index) => (
-          <>
-          <div className="flex flex-col items-center text-center">
-          <Card image={image.src} key={index} link={image.link} />
-          <p className="text-lg text-gray-600 mt-4 max-w-2xl">{image.name}</p>
-          </div>
-          </>
-        ))}
+      {images.map((image, index) => (
+  <div key={index} className="flex flex-col items-center text-center">
+    <Card image={image.src} link={image.link} />
+    <p className="text-lg text-gray-600 mt-4 max-w-2xl">{image.name}</p>
+    <a href={image.link} className="lg:hidden relative bg-blue-300 px-6 py-3 my-4 text-lg font-semibold text-white rounded-lg overflow-hidden ">
+      <span className="absolute inset-0 scale-x-0"></span>
+      <span className="relative z-20 block">Voir la documentation de {image.name}</span>
+    </a>
+  </div>
+))}
+
       </div>
       </div>
+
     </section>
   );
 }
