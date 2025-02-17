@@ -39,9 +39,45 @@ const projects: Project[] = [
     link: "",
     type: "projet scolaire",
   },
+  {
+    slug: "uzbek-culture",
+    name: "Uzbek Culture",
+    title: "Uzbek Culture",
+    description: "Site pour découvrir la culture ouzbek.",
+    image: "/uzbek.png",
+    link: "",
+    type: "projet scolaire",
+},
+{
+    slug: "acf2l",
+    name: "ACF2L",
+    title: "ACF2L",
+    description: "Refonte d'un site d'aéroclub. Site de réservation d'UML.",
+    image: "/acf2l.png",
+    link: "",
+    type: "projet scolaire",
+},
+{
+    slug: "webdocumentaire",
+    name: "Webdocumentaire",
+    title: "Webdocumentaire",
+    description: "Webdocumentaire réalisé auprès du comptoir d'Italie",
+    image: "/webdoc.png",
+    link: "",
+    type: "projet scolaire",
+},
+{
+    slug: "matos",
+    name: "Matos",
+    title: "Matos",
+    description: "Site de réservation de matériel informatique.",
+    image: "/matos.png",
+    link: "",
+    type: "projet scolaire",
+},
 ];
 
-// ✅ Fonction pour générer les paramètres de route dynamiques
+
 export async function generateStaticParams() {
   return projects.map((project) => ({
     slug: project.slug,
