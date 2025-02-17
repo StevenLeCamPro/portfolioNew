@@ -2,7 +2,7 @@
 
 import HomeCardProject from "@/components/HomeCardProject";
 import Card from "@/components/Card";
-import { Link } from "lucide-react";
+import Link from "next/link";
 
 
 

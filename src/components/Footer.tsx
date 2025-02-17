@@ -1,18 +1,17 @@
 "use client";
 
-import { Link } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const Footer = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // L'élément deviendra visible après 500ms
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 500); // Vous pouvez ajuster le délai ici.
+    }, 500);
 
-    return () => clearTimeout(timer); // Cleanup
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -21,24 +20,23 @@ const Footer = () => {
       <section className="bg-cyan-200">
         <div
           className={`
-                        max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8
-                        ${
-                          isVisible
-                            ? "opacity-100 translate-y-0 scale-100"
-                            : "opacity-0 translate-y-10 scale-95"
-                        }
-                        transition-all duration-1000 ease-out
-                    `}
+            max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8
+            ${
+              isVisible
+                ? "opacity-100 translate-y-0 scale-100"
+                : "opacity-0 translate-y-10 scale-95"
+            }
+            transition-all duration-1000 ease-out
+          `}
         >
           <nav className="flex flex-wrap justify-center -mx-5 -my-2">
             <div className="px-5 py-2">
               <Link
                 href="/"
                 className="text-base leading-6 text-gray-500 
-                                    hover:bg-clip-text hover:text-transparent 
-                                    hover:bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500
-                                    hover:text-xl    
-                                    transition-all duration-300"
+                hover:bg-clip-text hover:text-transparent 
+                hover:bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500
+                hover:text-xl transition-all duration-300"
               >
                 Accueil
               </Link>
@@ -47,37 +45,36 @@ const Footer = () => {
               <Link
                 href="#"
                 className="text-base leading-6 text-gray-500 
-                                    hover:bg-clip-text hover:text-transparent 
-                                    hover:bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500
-                                    hover:text-xl    
-                                    transition-all duration-300"
+                hover:bg-clip-text hover:text-transparent 
+                hover:bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500
+                hover:text-xl transition-all duration-300"
               >
-                A propos
+                À propos
               </Link>
             </div>
             <div className="px-5 py-2">
               <Link
                 href="#"
                 className="text-base leading-6 text-gray-500 
-                                    hover:bg-clip-text hover:text-transparent 
-                                    hover:bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500
-                                    hover:text-xl    
-                                    transition-all duration-300"
+                hover:bg-clip-text hover:text-transparent 
+                hover:bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500
+                hover:text-xl transition-all duration-300"
               >
                 Projets
               </Link>
             </div>
           </nav>
+
           <div className="flex justify-center mt-8 space-x-6">
             {/* GitHub */}
             <Link
               href="https://github.com/StevenLeCamPro"
               target="_blank"
               className="text-gray-400 hover:text-gray-500 
-            transform hover:scale-110 hover:rotate-12 
-            transition-all duration-500 ease-in-out 
-            hover:bg-clip-text 
-            hover:bg-gradient-to-r hover:from-gray-600 hover:to-gray-900"
+              transform hover:scale-110 hover:rotate-12 
+              transition-all duration-500 ease-in-out 
+              hover:bg-clip-text 
+              hover:bg-gradient-to-r hover:from-gray-600 hover:to-gray-900"
             >
               <span className="sr-only">GitHub</span>
               <svg
@@ -98,12 +95,11 @@ const Footer = () => {
             <Link
               href="https://www.linkedin.com/in/steven-le-cam/"
               target="_blank"
-             
               className="text-gray-400 hover:text-gray-500 
-            transform hover:scale-110 hover:rotate-12 
-            transition-all duration-500 ease-in-out 
-            hover:bg-clip-text 
-            hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-700"
+              transform hover:scale-110 hover:rotate-12 
+              transition-all duration-500 ease-in-out 
+              hover:bg-clip-text 
+              hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-700"
             >
               <span className="sr-only">LinkedIn</span>
               <svg
@@ -120,14 +116,14 @@ const Footer = () => {
               </svg>
             </Link>
 
-            {/* Email */}
-            <Link
+             {/* Email */}
+             <Link
               href="mailto:steven.lecam21@gmail.com"
               className="text-gray-400 hover:text-gray-500 
-            transform hover:scale-110 hover:rotate-12 
-            transition-all duration-500 ease-in-out 
-            hover:bg-clip-text 
-            hover:bg-gradient-to-r hover:from-red-500 hover:to-orange-500"
+              transform hover:scale-110 hover:rotate-12 
+              transition-all duration-500 ease-in-out 
+              hover:bg-clip-text 
+              hover:bg-gradient-to-r hover:from-red-500 hover:to-orange-500"
             >
               <span className="sr-only">Email</span>
               <svg

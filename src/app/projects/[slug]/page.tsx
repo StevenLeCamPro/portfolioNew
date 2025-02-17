@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 interface Project {
@@ -12,7 +13,9 @@ interface Project {
 }
 
 interface ProjectPageProps {
-  params: { slug: string };
+  params: {
+    slug: string;
+  };
 }
 
 const projects: Project[] = [
@@ -69,14 +72,13 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           )}
 
           {project.link && (
-            <a
+            <Link
               href={project.link}
               className="text-blue-500 underline flex justify-end mt-2"
               target="_blank"
-              rel="noopener noreferrer"
             >
               Voir le projet
-            </a>
+            </Link>
           )}
         </div>
 
