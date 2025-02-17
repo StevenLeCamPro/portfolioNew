@@ -1,4 +1,4 @@
-import Link from "next/link"; // Import correct pour Next.js
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 interface Project {
@@ -12,11 +12,6 @@ interface Project {
   type: string;
 }
 
-interface ProjectPageProps {
-  params: { slug: string | string[] | undefined };
-}
-
-// Liste des projets
 const projects: Project[] = [
   {
     slug: "comptoir-de-la-poste",
@@ -47,20 +42,20 @@ const projects: Project[] = [
   },
 ];
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  console.log("Params:", params); // Debug : Voir ce que Next.js envoie
+// ✅ Fonction pour générer les paramètres de route dynamiques
+export function generateStaticParams() {
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
+}
 
-  if (!params?.slug) {
-    return notFound();
-  }
+export default function ProjectPage({ params }: { params: { slug: string } }) {
+  console.log("Params:", params); // Debug: voir ce que Next.js envoie
 
-  // S'assurer que `slug` est bien une string
-  const slug = Array.isArray(params.slug) ? params.slug[0] : params.slug;
-  
-  const project = projects.find((p) => p.slug === slug);
+  const project = projects.find((p) => p.slug === params.slug);
 
   if (!project) {
-    return notFound(); // Page 404 de Next.js si le projet n'existe pas
+    return notFound();
   }
 
   return (
