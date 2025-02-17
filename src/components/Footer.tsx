@@ -32,7 +32,7 @@ const Footer = () => {
           <nav className="flex flex-wrap justify-center -mx-5 -my-2">
             <div className="px-5 py-2">
               <a
-                href="#"
+                href="/"
                 className="text-base leading-6 text-gray-500 
                                     hover:bg-clip-text hover:text-transparent 
                                     hover:bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500

@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 interface Project {
     title: string;
@@ -12,50 +13,50 @@ const projects: Project[] = [
     {
         title: "Comptoir de la Poste",
         description: "Site réalisé durant mon stage de deuxième année.",
-        image: "/ComptoirMockup.png",
-        link: "",
+        image: "/comptoir.png",
+        link: "comptoir-de-la-poste",
         type: "stage",
     },
     {
         title: "Doc and Go",
         description: "Site réalisé durant mon stage de deuxième année.",
-        image: "/DAGMockup.png",
-        link: "",
+        image: "/DAG.png",
+        link: "doc-and-go",
         type: "stage",
     },
     {
-        title: "SAE 5.01 : PharmInnov",
+        title: "PharmInnov",
         description: "Pharmacie en click and collect.",
-        image: "/PharmInnovMockup.png",
-        link: "",
+        image: "/pharminnov.png",
+        link: "pharminnov",
         type: "projet scolaire",
     },
     {
-        title: "SAE 4.02",
+        title: "Uzbek Culture",
         description: "Site pour découvrir la culture ouzbek.",
-        image: "/PharmInnovMockup.png",
-        link: "",
+        image: "/uzbek.png",
+        link: "uzbek-culture",
         type: "projet scolaire",
     },
     {
-        title: "SAE 3.01 : ACF2L",
-        description: "Refonte d'un site d'aéroclub. Site de réservation d'UML.",
-        image: "/DAGMockup.png",
-        link: "",
+        title: "ACF2L",
+        description: "Refonte d&apos;un site d&apos;aéroclub. Site de réservation d&apos;UML.",
+        image: "/acf2l.png",
+        link: "acf2l",
         type: "projet scolaire",
     },
     {
-        title: "SAE 3.02 : Webdocumentaire",
-        description: "Webdocumentaire réalisé auprès du comptoir d'Italie",
-        image: "/PharmInnovMockup.png",
-        link: "",
+        title: "Webdocumentaire",
+        description: "Webdocumentaire réalisé auprès du comptoir d&apos;Italie",
+        image: "/webdoc.png",
+        link: "webdocumentaire",
         type: "projet scolaire",
     },
     {
-        title: "SAE 2.03 : Matos",
+        title: "Matos",
         description: "Site de réservation de matériel informatique.",
-        image: "/PharmInnovMockup.png",
-        link: "",
+        image: "/matos.png",
+        link: "matos",
         type: "projet scolaire",
     },
 
@@ -85,7 +86,11 @@ const Projects: React.FC<ProjectsProps> = ({ selectedType }) => {
                         <p className="text-white text-lg font-bold">{project.title}</p>
                         <p className="text-white text-sm mt-2">{project.description}</p>
                         <div className="flex items-center justify-center gap-4 mt-4">
-                            <a href={project.link} className="text-blue-400 hover:underline">Voir le projet</a>
+                        
+                        <Link href={`/projects/${project.link}`} legacyBehavior>
+                        <a className="text-blue-400 hover:underline">Voir le projet</a>
+                        </Link>
+                
                         </div>
                     </div>
                 </div>

@@ -4,7 +4,7 @@ import HomeCardProject from "@/components/HomeCardProject";
 import Card from "@/components/Card";
 import { link } from "fs";
 
-import Projects from "./projects";
+
 
 export default function Home() {
   const images = [
@@ -22,7 +22,7 @@ export default function Home() {
       description:
         "Site réalisé durant mon stage de deuxième année.",
       image: "/ComptoirMockup.png",
-      link: "",
+      link: "/comptoir-de-la-poste",
       
     },
     {
@@ -30,7 +30,7 @@ export default function Home() {
       description:
         "Site réalisé durant mon stage de deuxième année.",
       image: "/DAGMockup.png",
-      link: "",
+      link: "/doc-and-go",
       
     },
     {
@@ -38,7 +38,7 @@ export default function Home() {
       description:
         "Pharmacie en click and collect.",
       image: "/PharmInnovMockup.png",
-      link: "",
+      link: "/pharminnov",
       
     },
   ];
@@ -60,11 +60,11 @@ export default function Home() {
         Bienvenue sur mon Portfolio !
       </h1>
       <p className="text-lg text-gray-600 mt-4 max-w-2xl">
-        Bonjour ! Je m'appelle Steven Le Cam, j’ai 20 ans et je suis développeur
-        full-stack. Passionné par le développement web, j'ai réalisé quelques
-        travaux que j'aimerais vous montrer et vous expliquer. Mon portfolio met
+        Bonjour ! Je m&apos;appelle Steven Le Cam, j&apos;ai 20 ans et je suis développeur
+        full-stack. Passionné par le développement web, j&apos;ai réalisé quelques
+        travaux que j&apos;aimerais vous montrer et vous expliquer. Mon portfolio met
         en avant mes projets, qui illustrent mon travail dans la création de
-        sites web et d'applications.
+        sites web et d&apos;applications.
       </p>
 
       {/* Bouton de téléchargement du CV */}
