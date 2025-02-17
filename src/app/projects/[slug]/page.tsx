@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 
 interface Project {
@@ -49,16 +48,17 @@ export async function generateStaticParams() {
   }));
 }
 
+
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
+export default async function ProjectPage({ params }: PageProps) {
+  const resolvedParams = await params;
+  console.log("Params:", resolvedParams); // Debug: voir ce que Next.js envoie
 
-export default function ProjectPage({ params }: PageProps) {
-  console.log("Params:", params); // Debug: voir ce que Next.js envoie
-
-  const project = projects.find((p) => p.slug === params.slug);
+  const project = projects.find((p) => p.slug === resolvedParams.slug);
 
   if (!project) {
     return notFound();
