@@ -2,7 +2,8 @@
 
 import HomeCardProject from "@/components/HomeCardProject";
 import Card from "@/components/Card";
-import { link } from "fs";
+import { Link } from "lucide-react";
+
 
 
 
@@ -68,14 +69,13 @@ export default function Home() {
       </p>
 
       {/* Bouton de téléchargement du CV */}
-      <a
+      <Link
         href="/LeCamStevenCV.pdf"
         className="relative bg-blue-300 px-6 py-3 my-4 text-lg font-semibold text-white rounded-lg overflow-hidden group transition-all duration-500"
-        download
       >
         <span className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left bg-gradient-to-r from-blue-500 to-blue-300 transition-transform duration-500 ease-out"></span>
         <span className="relative z-10">Téléchargez mon CV</span>
-      </a>
+      </Link>
 
       {/* Flèche vers la section projets */}
       <a href="#projet">

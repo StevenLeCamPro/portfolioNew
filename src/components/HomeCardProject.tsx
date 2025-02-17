@@ -1,13 +1,5 @@
 import Link from "next/link";
 
-interface Project {
-  title: string;
-  description: string;
-  image: string;
-  link: string;
-  type: string;
-}
-
 interface CardProps {
   title: string;
   description: string;
