@@ -43,13 +43,12 @@ const projects: Project[] = [
 ];
 
 // ✅ Fonction pour générer les paramètres de route dynamiques
-export function generateStaticParams() {
+export async function generateStaticParams() {
   return projects.map((project) => ({
     slug: project.slug,
   }));
 }
 
-// 🔄 Correction de la fonction ProjectPage
 interface PageProps {
   params: {
     slug: string;
