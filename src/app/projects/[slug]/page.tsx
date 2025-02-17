@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "next/link"; // Import correct pour Next.js
 import { notFound } from "next/navigation";
 
 interface Project {
@@ -13,11 +13,10 @@ interface Project {
 }
 
 interface ProjectPageProps {
-  params: {
-    slug: string;
-  };
+  params: { slug: string | string[] | undefined };
 }
 
+// Liste des projets
 const projects: Project[] = [
   {
     slug: "comptoir-de-la-poste",
@@ -49,10 +48,19 @@ const projects: Project[] = [
 ];
 
 export default function ProjectPage({ params }: ProjectPageProps) {
-  const project = projects.find((p) => p.slug === params.slug);
+  console.log("Params:", params); // Debug : Voir ce que Next.js envoie
+
+  if (!params?.slug) {
+    return notFound();
+  }
+
+  // S'assurer que `slug` est bien une string
+  const slug = Array.isArray(params.slug) ? params.slug[0] : params.slug;
+  
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
-    return notFound(); // Gère automatiquement la page 404 de Next.js
+    return notFound(); // Page 404 de Next.js si le projet n'existe pas
   }
 
   return (
@@ -71,14 +79,15 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             />
           )}
 
-          {project.link && (
-            <Link
+          {project.link && project.link.trim() !== "" && (
+            <a
               href={project.link}
               className="text-blue-500 underline flex justify-end mt-2"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Voir le projet
-            </Link>
+            </a>
           )}
         </div>
 
