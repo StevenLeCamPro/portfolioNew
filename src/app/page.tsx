@@ -78,7 +78,7 @@ export default function Home() {
       </Link>
 
       {/* Flèche vers la section projets */}
-      <a href="#projet">
+      <Link href="#projet">
         <svg
           className="w-6 h-6 mt-2 text-blue-600 group-hover:text-white animate-bounce"
           xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +93,7 @@ export default function Home() {
             d="M19 9l-7 7-7-7"
           />
         </svg>
-      </a>
+      </Link>
 
       {/* Animation des vagues */}
       <style jsx>{`
@@ -131,10 +131,10 @@ export default function Home() {
       </div>
 
       {/* Bouton Voir plus de projets */}
-      <a href="/projects" className="relative bg-blue-300 px-6 py-3 my-4 text-lg font-semibold text-white rounded-lg overflow-hidden group transition-all duration-500">
+      <Link href="/projects" className="relative bg-blue-300 px-6 py-3 my-4 text-lg font-semibold text-white rounded-lg overflow-hidden group transition-all duration-500">
         <span className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-right bg-gradient-to-r from-blue-300 to-blue-500 transition-transform duration-500 ease-out"></span>
         <span className="relative z-20 block">Voir plus de projets</span>
-      </a>
+      </Link>
       
 
      
@@ -150,10 +150,10 @@ export default function Home() {
   <div key={index} className="flex flex-col items-center text-center">
     <Card image={image.src} link={image.link} />
     <p className="text-lg text-gray-600 mt-4 max-w-2xl">{image.name}</p>
-    <a href={image.link} className="lg:hidden relative bg-blue-300 px-6 py-3 my-4 text-lg font-semibold text-white rounded-lg overflow-hidden ">
+    <Link href={image.link} className="lg:hidden relative bg-blue-300 px-6 py-3 my-4 text-lg font-semibold text-white rounded-lg overflow-hidden ">
       <span className="absolute inset-0 scale-x-0"></span>
       <span className="relative z-20 block">Voir la documentation de {image.name}</span>
-    </a>
+    </Link>
   </div>
 ))}
 

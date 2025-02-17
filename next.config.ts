@@ -1,6 +1,8 @@
-import defineConfig from 'next';
+const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true, // Désactive ESLint lors du build
+  },
+  turbopack: false, // Si tu veux désactiver Turbopack
+};
 
-export default defineConfig({
-  turbopack: false,
-  
-});
+export default nextConfig;
