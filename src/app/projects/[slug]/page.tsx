@@ -49,7 +49,14 @@ export function generateStaticParams() {
   }));
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
+// 🔄 Correction de la fonction ProjectPage
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
+
+export default function ProjectPage({ params }: PageProps) {
   console.log("Params:", params); // Debug: voir ce que Next.js envoie
 
   const project = projects.find((p) => p.slug === params.slug);
