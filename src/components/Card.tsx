@@ -14,7 +14,7 @@ const Card: React.FC<CardProps> = ({ image, link }) => {
 
   return (
     <motion.div
-      className="relative overflow-hidden h-[200px] min-w-[200px] rounded-xl flex justify-center items-center"
+      className="relative overflow-hidden h-[100px] min-w-[100px] lg:h-[175px] lg:min-w-[175px] rounded-xl flex justify-center items-center"
       key={image}
       onHoverStart={() => setShowOverlay(true)}
       onHoverEnd={() => setShowOverlay(false)}

@@ -14,7 +14,7 @@ const HomeCardProject: React.FC<CardProps> = ({
   link,
 }) => {
   return (
-    <div className="relative group w-[320px] h-[220px] rounded-xl overflow-hidden">
+    <div className="relative group w-[220px] h-[220px] lg:w-[320px] lg:h-[250px] rounded-xl overflow-hidden">
       {/* Image du projet */}
       <img
         src={image}

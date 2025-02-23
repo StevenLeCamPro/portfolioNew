@@ -4,55 +4,59 @@ import HomeCardProject from "@/components/HomeCardProject";
 import Card from "@/components/Card";
 import Link from "next/link";
 
-
-
-
 export default function Home() {
   const images = [
-    { src: "/react.svg", name: "React.js" , link: "https://react.dev/"},
-    { src: "/symfony.svg", name: "PHP Symfony" , link: "https://symfony.com/doc/current/index.html"},
-    { src: "/nextjs.svg", name: "Next.js", link: "https://nextjs.org/docs"},
-    { src: "/angular.svg", name: "Angular" , link: "https://angular.dev/"},
-    { src: "/tailwind.svg", name: "Tailwind",  link: "https://v2.tailwindcss.com/docs"},
-    { src: "/bootstrap.svg", name: "Bootstrap" , link: "https://getbootstrap.com/"},
+    { src: "/react.svg", name: "React.js", link: "https://react.dev/" },
+    { src: "/symfony.svg", name: "PHP Symfony", link: "https://symfony.com/doc/current/index.html",},
+    { src: "/nextjs.svg", name: "Next.js", link: "https://nextjs.org/docs" },
+    { src: "/angular.svg", name: "Angular", link: "https://angular.dev/" },
+    { src: "/tailwind.svg", name: "Tailwind", link: "https://v2.tailwindcss.com/docs", },
+    { src: "/bootstrap.svg", name: "Bootstrap", link: "https://getbootstrap.com/", },
+  ];
+
+  const graphSkills = [
+    { src: "/photoshop.svg", name: "PhotoShop", link: "https://graphql.org/" },
+    { src: "/illustrator.svg", name: "Illustrator", link: "https://www.apollographql.com/docs/", },
+    { src: "/premiere-pro.svg", name: "Premiere Pro", link: "https://hasura.io/docs/1.0/graphql/core/index.html",},
+    { src: "/figma.svg", name: "Figma", link: "https://www.prisma.io/docs/" },
+  ];
+
+  const gestionSkills = [
+    { src: "/git.svg", name: "Git", link: "https://git-scm.com/doc" },
+    { src: "/trello.svg", name: "Trello", link: "https://docs.docker.com/" },
+    { src: "/google-docs.svg", name: "Google Docs", link: "https://www.jenkins.io/doc/", },
   ];
 
   const homeProjects = [
     {
       title: "Comptoir de la Poste",
-      description:
-        "Site réalisé durant mon stage de deuxième année.",
+      description: "Site réalisé durant mon stage de deuxième année.",
       image: "/ComptoirMockup.png",
       link: "/comptoir-de-la-poste",
-      
     },
     {
       title: "Doc and Go",
-      description:
-        "Site réalisé durant mon stage de deuxième année.",
+      description: "Site réalisé durant mon stage de deuxième année.",
       image: "/DAGMockup.png",
       link: "/doc-and-go",
-      
     },
     {
       title: "SAE 5.01 : PharmInnov",
-      description:
-        "Pharmacie en click and collect.",
+      description: "Pharmacie en click and collect.",
       image: "/PharmInnovMockup.png",
       link: "/pharminnov",
-      
     },
   ];
 
   return (
     <section className="flex flex-col items-center text-center py-10 relative">
       {/* Avatar */}
-      <div className="relative w-72 h-72 flex items-center justify-center">
+      <div className="relative w-60 h-60 lg:w-72 lg:h-72 flex items-center justify-center">
         <div className="absolute w-full h-full rounded-full bg-gradient-to-r from-blue-300 to-blue-500"></div>
         <img
           src="/PDP.jpeg"
           alt="Photo de profil"
-          className="w-30 h-30 xl:w-60 xl:h-60 rounded-full shadow-lg transition-transform duration-1000 relative z-0"
+          className="w-48 h-48 lg:w-60 lg:h-60 rounded-full shadow-lg transition-transform duration-1000 relative z-0"
         />
       </div>
 
@@ -61,11 +65,11 @@ export default function Home() {
         Bienvenue sur mon Portfolio !
       </h1>
       <p className="text-lg text-gray-600 mt-4 max-w-2xl">
-        Bonjour ! Je m&apos;appelle Steven Le Cam, j&apos;ai 20 ans et je suis développeur
-        full-stack. Passionné par le développement web, j&apos;ai réalisé quelques
-        travaux que j&apos;aimerais vous montrer et vous expliquer. Mon portfolio met
-        en avant mes projets, qui illustrent mon travail dans la création de
-        sites web et d&apos;applications.
+        Bonjour ! Je m&apos;appelle Steven Le Cam, j&apos;ai 20 ans et je suis
+        développeur full-stack. Passionné par le développement web, j&apos;ai
+        réalisé quelques travaux que j&apos;aimerais vous montrer et vous
+        expliquer. Mon portfolio met en avant mes projets, qui illustrent mon
+        travail dans la création de sites web et d&apos;applications.
       </p>
 
       {/* Bouton de téléchargement du CV */}
@@ -123,42 +127,71 @@ export default function Home() {
       <p className="text-lg text-gray-600 mt-4 max-w-2xl">
         Voici un aperçu de mes projets
       </p>
-      
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-6 place-items-center">
-      {homeProjects.map((project, index) => (
-        <HomeCardProject key={index} title={project.title} description={project.description} image={project.image} link={project.link}/>
-      ))}
+
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 lg:gap-10 mt-6 place-items-center">
+        {homeProjects.map((project, index) => (
+          <HomeCardProject
+            key={index}
+            title={project.title}
+            description={project.description}
+            image={project.image}
+            link={project.link}
+          />
+        ))}
       </div>
 
       {/* Bouton Voir plus de projets */}
-      <Link href="/projects" className="relative bg-blue-300 px-6 py-3 my-4 text-lg font-semibold text-white rounded-lg overflow-hidden group transition-all duration-500">
+      <Link
+        href="/projects"
+        className="relative bg-blue-300 px-6 py-3 my-4 text-lg font-semibold text-white rounded-lg overflow-hidden group transition-all duration-500"
+      >
         <span className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-right bg-gradient-to-r from-blue-300 to-blue-500 transition-transform duration-500 ease-out"></span>
         <span className="relative z-20 block">Voir plus de projets</span>
       </Link>
-      
 
-     
+      <div className="flex flex-col items-center text-center py-10 relative">
+  <h1 className="text-blue-400 text-4xl font-bold mt-6">Mes Compétences</h1>
+  <div className="flex flex-col w-full mt-10 space-y-10 lg:space-x-0">
+    {/* Développement Web */}
+    <div className="w-full">
+      <h1 className="text-blue-600 text-2xl text-left font-bold">Développement Web</h1>
+      <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-10 mt-2">
+        {images.map((image, index) => (
+          <div key={index} className="flex flex-col items-center text-center relative">
+            <Card image={image.src} link={image.link} />
+            <p className="text-lg text-gray-600 mt-4 max-w-2xl">{image.name}</p>
+          </div>
+        ))}
+      </div>
+    </div>
 
-        <div className="flex flex-col items-center text-center py-10 relative">
-      <h1 className="text-blue-400 text-4xl font-bold mt-6" id="projet">
-        Mes Compétences
-      </h1>
-      {/* Carrousel infini sans animation */}
-      <div className="flex flex-col lg:flex-row gap-4 mt-10">
-      
-      {images.map((image, index) => (
-  <div key={index} className="flex flex-col items-center text-center">
-    <Card image={image.src} link={image.link} />
-    <p className="text-lg text-gray-600 mt-4 max-w-2xl">{image.name}</p>
-    <Link href={image.link} className="lg:hidden relative bg-blue-300 px-6 py-3 my-4 text-lg font-semibold text-white rounded-lg overflow-hidden ">
-      <span className="absolute inset-0 scale-x-0"></span>
-      <span className="relative z-20 block">Voir la documentation de {image.name}</span>
-    </Link>
+    {/* Graphisme */}
+    <div className="w-full">
+      <h1 className="text-blue-600 text-2xl text-left font-bold">Graphisme</h1>
+      <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-10 mt-2">
+        {graphSkills.map((image, index) => (
+          <div key={index} className="flex flex-col items-center text-center relative">
+            <Card image={image.src} link={image.link} />
+            <p className="text-lg text-gray-600 mt-4 max-w-2xl">{image.name}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    {/* Gestion de projet */}
+    <div className="w-full">
+      <h1 className="text-blue-600 text-2xl text-left font-bold">Gestion de projet</h1>
+      <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-10 mt-2">
+        {gestionSkills.map((image, index) => (
+          <div key={index} className="flex flex-col items-center text-center relative">
+            <Card image={image.src} link={image.link} />
+            <p className="text-lg text-gray-600 mt-4 max-w-2xl">{image.name}</p>
+          </div>
+        ))}
+      </div>
+    </div>
   </div>
-))}
-
-      </div>
-      </div>
+</div>
 
     </section>
   );
