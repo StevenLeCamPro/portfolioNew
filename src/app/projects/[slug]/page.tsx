@@ -16,9 +16,16 @@ const projects: Project[] = [
     slug: "comptoir-de-la-poste",
     name: "Comptoir de la Poste",
     title: "Comptoir de la Poste",
-    description: "Site réalisé durant mon stage de deuxième année.",
+    description: `Le Comptoir de la Poste est un site de réservation de table de restaurant en ligne.
+  Il permet aussi de consulter des menus et des produits, et ainsi voir le prix de chaque menu.
+Les gérants du restaurant peuvent ajouter un menu avec une date de validité afin de le changer comme bon leur semble.
+
+J'ai réalisé ce site en 2 semaines lors d'un stage, en toute autonomie, et en ayant appris les bases de symfony la semaine d'avant.
+Je suis très fier de ce travail, car j'ai réussi à réaliser un site complet en si peu de temps.
+
+Le site a été réalisé à l'aide de Symfony et Twig.`,
     image: "/comptoir.png",
-    link: "",
+    link: "http://comptoirdelaposte.fr/",
     type: "stage",
   },
   {
@@ -47,17 +54,17 @@ const projects: Project[] = [
     image: "/uzbek.png",
     link: "",
     type: "projet scolaire",
-},
-{
+  },
+  {
     slug: "acf2l",
     name: "ACF2L",
     title: "ACF2L",
-    description: "Refonte d'un site d'aéroclub. Site de réservation d'UML.",
+    description: "Refonte d'un site d'aéroclub.\nSite de réservation d'UML.",
     image: "/acf2l.png",
     link: "",
     type: "projet scolaire",
-},
-{
+  },
+  {
     slug: "webdocumentaire",
     name: "Webdocumentaire",
     title: "Webdocumentaire",
@@ -65,8 +72,8 @@ const projects: Project[] = [
     image: "/webdoc.png",
     link: "",
     type: "projet scolaire",
-},
-{
+  },
+  {
     slug: "matos",
     name: "Matos",
     title: "Matos",
@@ -74,7 +81,7 @@ const projects: Project[] = [
     image: "/matos.png",
     link: "",
     type: "projet scolaire",
-},
+  },
 ];
 
 
@@ -112,24 +119,29 @@ export default async function ProjectPage({ params }: PageProps) {
             <img
               src={project.image}
               alt={project.name}
-              className="w-full h-full object-cover rounded-lg shadow-md"
+              className=" object-cover rounded-lg shadow-md"
             />
           )}
 
-          {project.link && project.link.trim() !== "" && (
-            <a
+            {project.link && project.link.trim() !== "" && (
+            <div className="justify-start mt-4 relative inline-flex  group">
+              <div
+            className="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
+        </div>
+              <a
               href={project.link}
-              className="text-blue-500 underline flex justify-end mt-2"
+              className="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-blue-500 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
               target="_blank"
               rel="noopener noreferrer"
-            >
+              >
               Voir le projet
-            </a>
-          )}
+              </a>
+            </div>
+            )}
         </div>
 
         <div className="bg-white p-6 rounded-lg shadow-md">
-          <p className="text-lg text-gray-700 mb-4 text-justify">
+          <p className="text-lg text-gray-700 mb-4 text-justify whitespace-pre-line">
             {project.description}
           </p>
         </div>
