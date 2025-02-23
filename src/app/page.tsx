@@ -15,16 +15,16 @@ export default function Home() {
   ];
 
   const graphSkills = [
-    { src: "/photoshop.svg", name: "PhotoShop", link: "https://graphql.org/" },
-    { src: "/illustrator.svg", name: "Illustrator", link: "https://www.apollographql.com/docs/", },
-    { src: "/premiere-pro.svg", name: "Premiere Pro", link: "https://hasura.io/docs/1.0/graphql/core/index.html",},
-    { src: "/figma.svg", name: "Figma", link: "https://www.prisma.io/docs/" },
+    { src: "/photoshop.svg", name: "PhotoShop", link: "https://helpx.adobe.com/fr/photoshop/user-guide.html" },
+    { src: "/illustrator.svg", name: "Illustrator", link: "https://helpx.adobe.com/fr/illustrator/user-guide.html", },
+    { src: "/premiere-pro.svg", name: "Premiere Pro", link: "https://helpx.adobe.com/fr/premiere-pro/user-guide.html",},
+    { src: "/figma.svg", name: "Figma", link: "https://help.figma.com/hc/fr" },
   ];
 
   const gestionSkills = [
     { src: "/git.svg", name: "Git", link: "https://git-scm.com/doc" },
-    { src: "/trello.svg", name: "Trello", link: "https://docs.docker.com/" },
-    { src: "/google-docs.svg", name: "Google Docs", link: "https://www.jenkins.io/doc/", },
+    { src: "/trello.svg", name: "Trello", link: "https://trello.com/guide" },
+    { src: "/google-docs.svg", name: "Google Docs", link: "https://developers.google.com/docs?hl=fr", },
   ];
 
   const homeProjects = [
