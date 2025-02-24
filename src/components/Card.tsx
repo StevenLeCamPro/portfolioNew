@@ -14,7 +14,7 @@ const Card: React.FC<CardProps> = ({ image, link }) => {
 
   return (
     <motion.div
-      className="relative overflow-hidden h-[100px] min-w-[100px] lg:h-[175px] lg:min-w-[175px] rounded-xl flex justify-center items-center"
+      className="relative overflow-hidden h-[100px] min-w-[100px] lg:h-[200px] lg:min-w-[200px] rounded-xl flex justify-center items-center"
       key={image}
       onHoverStart={() => setShowOverlay(true)}
       onHoverEnd={() => setShowOverlay(false)}
@@ -30,7 +30,7 @@ const Card: React.FC<CardProps> = ({ image, link }) => {
             >
             <div className="absolute bg-black pointer-events-none opacity-50 h-full w-full" />
             <motion.h1
-  className="bg-white font-semibold text-sm z-10 mx-1 py-2 px-4 rounded-full flex items-center gap-2 hover:bg-blue-200 origin-right hover:bg-gradient-to-tr from-blue-300 to-blue-500 min-w-[180px]"
+  className="bg-white font-semibold text-sm z-10 mx-1 py-2 px-2 rounded-full flex items-center gap-2 hover:bg-blue-200 origin-right hover:bg-gradient-to-tr from-blue-300 to-blue-500 whitespace-nowrap"
   initial={{ y: 10 }}
   animate={{ y: 0 }}
   exit={{ y: 10 }}
@@ -41,7 +41,7 @@ const Card: React.FC<CardProps> = ({ image, link }) => {
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
-      className="overflow-visible"
+      className="overflow-visible flex-shrink-0"
     >
       <path
         d="M19.071 4.929a10 10 0 1 0 0 14.142 10.011 10.011 0 0 0 0-14.142zm-1.414 12.728a8 8 0 1 1 0-11.314 8.01 8.01 0 0 1 0 11.314z"
