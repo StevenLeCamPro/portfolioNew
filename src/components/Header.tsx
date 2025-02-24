@@ -77,16 +77,16 @@ const Header = () => {
       <div className="relative z-10 flex items-center w-full">
         {/* Navigation Desktop */}
         <nav className="hidden md:flex w-full justify-center space-x-20">
-          <Link href="/" className="font-quicksand duration-1000 hover:text-yellowgreen hover:translate-y-[-4px] text-white font-bold uppercase text-lg transition hover:text-yellowgreen">
+          <Link href="/" className="font-quicksand duration-1000 hover:text-yellowgreen hover:translate-y-[-4px] text-white font-bold uppercase text-lg transition hover:text-yellowgreen" style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)" }}>
             Accueil
           </Link>
-          <Link href="/about" className="font-quicksand duration-1000 hover:text-yellowgreen hover:translate-y-[-4px] text-white font-bold uppercase text-lg transition hover:text-yellowgreen">
+          <Link href="/about" className="font-quicksand duration-1000 hover:text-yellowgreen hover:translate-y-[-4px] text-white font-bold uppercase text-lg transition hover:text-yellowgreen" style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)" }}>
             A propos
           </Link>
-          <Link href="/projects" className="font-quicksand duration-1000 hover:text-yellowgreen hover:translate-y-[-4px] text-white font-bold uppercase text-lg transition hover:text-yellowgreen">
+          <Link href="/projects" className="font-quicksand duration-1000 hover:text-yellowgreen hover:translate-y-[-4px] text-white font-bold uppercase text-lg transition hover:text-yellowgreen" style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)" }}>
             Projets
           </Link>
-          <Link href="#footer" className="font-quicksand duration-1000 hover:text-yellowgreen hover:translate-y-[-4px] text-white font-bold uppercase text-lg transition hover:text-yellowgreen">
+          <Link href="#footer" className="font-quicksand duration-1000 hover:text-yellowgreen hover:translate-y-[-4px] text-white font-bold uppercase text-lg transition hover:text-yellowgreen" style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)" }}>
             Contact
           </Link>
         </nav>

@@ -17,6 +17,7 @@ const projects: Project[] = [
     name: "Comptoir de la Poste",
     title: "Comptoir de la Poste",
     description: `Le Comptoir de la Poste est un site de réservation de table de restaurant en ligne. Il permet aussi de consulter des menus et des produits, et ainsi voir le prix de chaque menu.
+
 Les gérants du restaurant peuvent ajouter un menu avec une date de validité afin de le changer comme bon leur semble.
 
 J'ai réalisé ce site en 2 semaines lors d'un stage, en toute autonomie, et en ayant appris les bases de Symfony la semaine d'avant. Je suis très fier de ce travail, car j'ai réussi à réaliser un site complet en si peu de temps.
@@ -30,16 +31,29 @@ Le site a été réalisé à l'aide de Symfony et Twig.`,
     slug: "doc-and-go",
     name: "Doc and Go",
     title: "Doc and Go",
-    description: "Site réalisé durant mon stage de deuxième année.",
+    description: `Doc and Go est un site de réservation de rendez-vous médicaux en ligne. Il permet de consulter les médecins disponibles, de voir leurs horaires, et de réserver un rendez-vous.
+   
+    J'ai travaillé sur ce site durant mon stage de deuxième année, la première mission que j'ai eue a été de rendre le site responsive. J'ai ensuite travaillé sur la partie back-end, en ajoutant des fonctionnalités, et en corrigeant des bugs.
+
+    Doc And Go avait pour but d'être utilisé en Roumanie, mais le projet n'ets pas fini, et n'a pas été mis en production.
+
+    Sur ce projet, nous étions plusieurs à travailler dessus, et nous utilisions Symfony et Twig, c'est pourquoi je remercie Inès Temmar, Yaëlle Jehu et Victoria Moukielo pour leur aide sans faille.
+    `,
     image: "/DAG.png",
-    link: "",
+    link: "http://82.65.225.53/doc-and-go/public/",
     type: "stage",
   },
   {
     slug: "pharminnov",
     name: "PharmInnov",
     title: "PharmInnov",
-    description: "Pharmacie en click and collect.",
+    description: `PharmInnov est une pharmacie en click and collect qui permet aux patients de visualiser la disponibilité des médicaments et de les commander. Le site repose sur une fonctionnalité complexe : la transformation d'un fichier PDF en objets (médicaments et commandes).  
+    
+    C'est un projet universitaire donc je suis le chef de projet. J'ai donc été en charge de la répartition des tâches, de la communication avec les clients (professeurs), et de la réalisation de certaines fonctionnalités.
+    
+    Actuellement nous travaillons sur l'application mobile de ce site qui sera faite en React Native, tandis que le site est réalisé en Symfony et React.js.
+    
+    C'est l'un des projets les plus importants et complexes que j'ai réalisé, et je suis très fier du travail que nous avons accompli. Merci à Tom Prot et Nicolas Marly pour leur travail acharné.`,
     image: "/pharminnov.png",
     link: "",
     type: "projet scolaire",
@@ -48,7 +62,14 @@ Le site a été réalisé à l'aide de Symfony et Twig.`,
     slug: "uzbek-culture",
     name: "Uzbek Culture",
     title: "Uzbek Culture",
-    description: "Site pour découvrir la culture ouzbek.",
+    description: `Ce site est un projet scolaire regroupant plusieurs matières, le but était de faire découvrir une culture "inconnue" dans le monde. Nous avons, avec mon camarade Antoine Moulin, choisi la culture ouzbek.
+    
+    Ce site regroupe donc une préentation de la culture ouzbek, plus particulièrement l'architecture. Nous avons intégré un modèle 3D dans ce site, un modèle que nous avons crée nous-même, le minaret Khalon de Boukhara.
+
+    Ce n'est pas un projet qui présente énormément de fonctionnalités complexes, c'est pourquoi il a été fait en html, css et javascript, étant donné que le but preier n'était pas de créer un site complexe, mais plutôt un site informatif sur une culture peu connue.
+    
+    Ce site a été accompagné d'une présentation orale avec un support visuel, et a été noté en conséquence.
+    `,
     image: "/uzbek.png",
     link: "",
     type: "projet scolaire",
@@ -57,7 +78,11 @@ Le site a été réalisé à l'aide de Symfony et Twig.`,
     slug: "acf2l",
     name: "ACF2L",
     title: "ACF2L",
-    description: "Refonte d'un site d'aéroclub.\nSite de réservation d'UML.",
+    description: `L’Aéro-Club de Frotey-les-Lures (ACF2L) est une association aéronautique dédiée à la promotion et au développement de la pratique de l’aviation au sein de sa communauté. Elle est née d’une fusion de l'Aéro-Club de l'Ill à Vesoul et de l'Aéro-Club Marin-La-Meslée à Frotey-les-Lure, au sein de l'Association des Aéro-Clubs de la Bourgogne-Franche-Comté. 
+    
+    Pour ce travail nous avons été commissionnés par l'ACF2L pour refaire leur site internet. Nous avons donc réalisé un site de réservation de vol en ligne, avec un back-office pour les administrateurs en php, et un front-office pour les utilisateurs en html, css et javascript.
+    
+    Sur ce projet, j'ai été en charge de la prtie front-end ainsi que du responsive. Nous étions 4 sur la réalisation de ce projet universitaire de 2ème année : Alexandre Guedes, Timothé Hege, Arnaud Royer et moi-même.`,
     image: "/acf2l.png",
     link: "",
     type: "projet scolaire",
@@ -66,16 +91,25 @@ Le site a été réalisé à l'aide de Symfony et Twig.`,
     slug: "webdocumentaire",
     name: "Webdocumentaire",
     title: "Webdocumentaire",
-    description: "Webdocumentaire réalisé auprès du comptoir d'Italie",
+    description: `Ce webdocumentaire est un projet universitaire de deuxième année. Il a été réalisé avec l'aide du Comptoir d'Italie, une épicerie italienne situé à Meaux. Le but était de mettre en avant le restaurant, son histoire, ses plats, et son équipe. Nous avons donc réalisé un site en html, css et javascript, sans framework. Nous étions 4 sur ce projet : Alexandre Guedes, Jaraf Gueye, Sanjy Boot et moi-même. 
+    
+    Ce projet est inter-matières, il regroupe l'expression-communication avec la rédaction des plusieurs articles sur l'établissement, l'audiovisuel avec les prise de vue du restaurant ainsi que l'interview du gérant, le montage vidéo de celle-ci, sans oublier l'anglais pour la traduction des sous-titres et enfin le développement web du site en lui-même.
+
+    Nous avons donc pu mettre en pratique plusieurs aspect de notre formation et mettre à bien nos connaissances afin de réaliser un projet polyvalent et complet.
+    `,
     image: "/webdoc.png",
-    link: "",
+    link: "https://guedesalexandre.github.io/Webdoc/",
     type: "projet scolaire",
   },
   {
     slug: "matos",
     name: "Matos",
     title: "Matos",
-    description: "Site de réservation de matériel informatique.",
+    description: `Matos est un projet universitaire de première année. Il s'agit d'un site de réservation du matériel ifromatique de l'école. Nous avons réalisé ce site en html, css et javascript, sans framework.
+    
+    Nous étions 3 sur ce projet : Alexandre Guedes, Arnaud Royer et moi-même. J'ai étét chargé de la partie front-end du projet, ainsi que du graphisme, ce qui contient la création du logo, le choix des couleurs, de la charte graphique et de la maquette.
+    
+    C'est le premier projet collaboratif que nous avons dû réaliser durant notre cursus, cela a été un moment charnière dans mon apprentissage car ce site regroupe toutes les bases dont j'avais besoin pour passer en deuxième année`,
     image: "/matos.png",
     link: "",
     type: "projet scolaire",

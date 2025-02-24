@@ -40,14 +40,14 @@ const projects: Project[] = [
     },
     {
         title: "ACF2L",
-        description: "Refonte d&apos;un site d&apos;aéroclub. Site de réservation d&apos;UML.",
+        description: "Refonte d'un site d'aéroclub. Site de réservation d'UML.",
         image: "/acf2l.png",
         link: "acf2l",
         type: "projet scolaire",
     },
     {
         title: "Webdocumentaire",
-        description: "Webdocumentaire réalisé auprès du comptoir d&apos;Italie",
+        description: "Webdocumentaire réalisé auprès du comptoir d'Italie",
         image: "/webdoc.png",
         link: "webdocumentaire",
         type: "projet scolaire",
