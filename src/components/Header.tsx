@@ -8,7 +8,6 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 
-  // Empêcher l'erreur SSR/CSR en attendant que le composant soit monté
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -80,8 +79,8 @@ const Header = () => {
           <Link href="/" className="font-quicksand duration-1000 hover:text-yellowgreen hover:translate-y-[-4px] text-white font-bold uppercase text-lg transition hover:text-yellowgreen" style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)" }}>
             Accueil
           </Link>
-          <Link href="/about" className="font-quicksand duration-1000 hover:text-yellowgreen hover:translate-y-[-4px] text-white font-bold uppercase text-lg transition hover:text-yellowgreen" style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)" }}>
-            A propos
+          <Link href="/veille" className="font-quicksand duration-1000 hover:text-yellowgreen hover:translate-y-[-4px] text-white font-bold uppercase text-lg transition hover:text-yellowgreen" style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)" }}>
+            Veille Technologique
           </Link>
           <Link href="/projects" className="font-quicksand duration-1000 hover:text-yellowgreen hover:translate-y-[-4px] text-white font-bold uppercase text-lg transition hover:text-yellowgreen" style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)" }}>
             Projets
@@ -105,7 +104,7 @@ const Header = () => {
             suppressHydrationWarning
           >
             <Link href="/" className="text-lg" onClick={() => setIsOpen(false)}>Accueil</Link>
-            <Link href="/about" className="text-lg" onClick={() => setIsOpen(false)}>A propos</Link>
+            <Link href="/veille" className="text-lg" onClick={() => setIsOpen(false)}>A propos</Link>
             <Link href="/projects" className="text-lg" onClick={() => setIsOpen(false)}>Projets</Link>
             <Link href="#footer" className="text-lg" onClick={() => setIsOpen(false)}>Contact</Link>
           </nav>

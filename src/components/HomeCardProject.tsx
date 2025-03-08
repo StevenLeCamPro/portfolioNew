@@ -25,11 +25,13 @@ const HomeCardProject: React.FC<CardProps> = ({
       {/* Overlay sombre + Texte caché par défaut */}
       <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
         <p className="text-white text-lg font-bold">{title}</p>
-        <p className="text-white text-sm mt-2">{description}</p>
+        <p className="text-white text-sm my-2">{description}</p>
         <div>
-          <Link href={`/projects/${link}`} legacyBehavior>
-            <a className="text-blue-400 hover:underline">Voir le projet</a>
-          </Link>
+            <Link href={`/projects/${link}`} legacyBehavior>
+            <a className="px-4 mt-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-300">
+              Voir le projet
+            </a>
+            </Link>
         </div>
       </div>
     </div>

@@ -75,9 +75,9 @@ export default function Home() {
       {/* Bouton de téléchargement du CV */}
       <Link
         href="/LeCamStevenCV.pdf"
-        className="relative bg-blue-300 px-6 py-3 my-4 text-lg font-semibold text-white rounded-lg overflow-hidden group transition-all duration-500"
+        className="relative bg-blue-400 px-6 py-3 my-4 text-lg font-semibold text-white rounded-lg overflow-hidden group transition-all duration-500"
       >
-        <span className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left bg-gradient-to-r from-blue-500 to-blue-300 transition-transform duration-500 ease-out"></span>
+        <span className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left bg-gradient-to-r from-blue-500 to-blue-400 transition-transform duration-500 ease-out"></span>
         <span className="relative z-10">Téléchargez mon CV</span>
       </Link>
 
@@ -143,9 +143,9 @@ export default function Home() {
       {/* Bouton Voir plus de projets */}
       <Link
         href="/projects"
-        className="relative bg-blue-300 px-6 py-3 my-4 text-lg font-semibold text-white rounded-lg overflow-hidden group transition-all duration-500"
+        className="relative bg-blue-400 px-6 py-3 my-4 text-lg font-semibold text-white rounded-lg overflow-hidden group transition-all duration-500"
       >
-        <span className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-right bg-gradient-to-r from-blue-300 to-blue-500 transition-transform duration-500 ease-out"></span>
+        <span className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-right bg-gradient-to-r from-blue-400 to-blue-500 transition-transform duration-500 ease-out"></span>
         <span className="relative z-20 block">Voir plus de projets</span>
       </Link>
 
