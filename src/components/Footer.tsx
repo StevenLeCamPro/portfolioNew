@@ -135,6 +135,29 @@ const Footer = () => {
                 <path d="M2 4a2 2 0 012-2h16a2 2 0 012 2v16a2 2 0 01-2 2H4a2 2 0 01-2-2V4zm2 0v16h16V4H4zm8 6l8-4v12H4V6l8 4z"></path>
               </svg>
             </Link>
+            {/* Téléphone */}
+            <Link
+              href="tel:+33615803612"
+              className="text-gray-400 hover:text-gray-500 
+              transform hover:scale-110 hover:rotate-12 
+              transition-all duration-500 ease-in-out 
+              hover:bg-clip-text 
+              hover:bg-gradient-to-r hover:from-green-500 hover:to-green-700"
+            >
+              <span className="sr-only">Téléphone</span>
+              <svg
+                className="w-8 h-8"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.004 1.004 0 011.11-.21c1.12.45 2.33.69 3.59.69.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C10.07 22 2 13.93 2 3.5 2 2.95 2.45 2.5 3 2.5H6.5c.55 0 1 .45 1 1 0 1.26.24 2.47.69 3.59.14.34.06.73-.21 1.11l-2.2 2.2z"
+                />
+              </svg>
+            </Link>
           </div>
 
           <p className="mt-8 text-base leading-6 text-center text-gray-400">

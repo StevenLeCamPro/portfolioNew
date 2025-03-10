@@ -151,6 +151,25 @@ export default function Home() {
 
       <div className="flex flex-col items-center text-center py-10 relative">
   <h1 className="text-blue-400 text-4xl font-bold mt-6">Mes Compétences</h1>
+
+  <div className="w-full">
+      <h1 className="text-blue-600 text-2xl text-left font-bold">Langues parlées</h1>
+      <div className="flex lg:flex-row flex-col items-center lg:items-start mt-20 space-y-10 lg:space-y-0 lg:space-x-20">
+      <div className="flex flex-col items-center">
+        <img src="/france.png" alt="Français" className="w-32 h-32 animate-bounce" />
+        <p className="text-lg text-gray-600">Français</p>
+      </div>
+      <div className="flex flex-col items-center">
+        <img src="/royaume-uni.png" alt="Anglais" className="w-32 h-32 animate-bounce" />
+        <p className="text-lg text-gray-600">Anglais</p>
+      </div>
+      <div className="flex flex-col items-center">
+        <img src="/allemagne.png" alt="Allemand" className="w-32 h-32 animate-bounce" />
+        <p className="text-lg text-gray-600">Allemand</p>
+      </div>
+      </div>
+    </div>
+    
   <div className="flex flex-col w-full mt-10 space-y-10 lg:space-x-0">
     {/* Développement Web */}
     <div className="w-full">
@@ -190,6 +209,8 @@ export default function Home() {
         ))}
       </div>
     </div>
+
+   
   </div>
 </div>
 
