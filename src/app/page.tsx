@@ -71,13 +71,13 @@ export default function Home() {
         expliquer. Mon portfolio met en avant mes projets, qui illustrent mon
         travail dans la création de sites web et d&apos;applications.
       </p>
-      <p className="text-lg text-gray-600 mt-4 max-w-2xl">
+      {/* <p className="text-lg text-gray-600 mt-4 max-w-2xl">
       Si je suis en BUT MMI aujourd’hui, c’est grâce à ma passion pour l’informatique, 
       je m’y suis toujours intéressé de près ou de loin, plus jeune je démontais 
       des ordinateurs cassés pour en voir l’intérieur. Je n’aimais pas qu'utiliser les outils informatiques, 
       je voulais en connaître l’intérieur. Voilà pourquoi je suis dans cette formation, 
       qui nous apprend l’envers du décor des sites et applications web.
-      </p>
+      </p> */}
 
       {/* Bouton de téléchargement du CV */}
       <Link
