@@ -104,7 +104,7 @@ const Header = () => {
             suppressHydrationWarning
           >
             <Link href="/" className="text-lg" onClick={() => setIsOpen(false)}>Accueil</Link>
-            <Link href="/veille" className="text-lg" onClick={() => setIsOpen(false)}>A propos</Link>
+            <Link href="/veille" className="text-lg" onClick={() => setIsOpen(false)}>Veille Technologique</Link>
             <Link href="/projects" className="text-lg" onClick={() => setIsOpen(false)}>Projets</Link>
             <Link href="#footer" className="text-lg" onClick={() => setIsOpen(false)}>Contact</Link>
           </nav>
