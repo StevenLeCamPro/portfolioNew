@@ -12,7 +12,7 @@ const veilleInfos = [
     },
     {
       id: 2,
-      title: "Comment devenirdéveloppeur spécialisé Symfony ?",
+      title: "Comment devenir développeur spécialisé Symfony ?",
       date: "Non spécifiéé",
       source: "https://my-flow.fr/comment-devenir-developpeur-specialise-symfony/frameworks-php/symfony/",
       author : "Michael Le Hoang - My Flow",
