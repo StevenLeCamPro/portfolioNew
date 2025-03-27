@@ -3,15 +3,24 @@ import React from 'react'
 const veilleInfos = [
     {
       id: 1,
-      title: "Symfony 7.2 : Quelles nouveautés en 2025 ?",
-      date: "30 Janvier 2025",
-      source: "https://drosalys.fr/les-nouveautes-de-symfony-7-2-ce-quil-faut-savoir-en-2025/",
-      author: "Drosalys",
-      screenShot: "/symfonyNews.png",
-      summary: "Découvrez les principales améliorations de Symfony 7.2 et comment elles impactent vos projets."
+      title: "Normes RGAA (RGAA: Référentiel général d'amélioration de l'accessibilité)",
+      date: "27 Février 2025",
+      source: "https://www.itefficience.com/article/normes-rgaa-les-cles-dune-experience-utilisateur-reussie-pour-tous",
+      author: "Astrid Fontaine - IT Efficience",
+      screenShot: "/RGAA.png",
+      summary: "Les normes RGAA : Les clés d'une expérience utilisateur réussie pour tous."
     },
     {
       id: 2,
+      title: "Comment devenirdéveloppeur spécialisé Symfony ?",
+      date: "Non spécifiéé",
+      source: "https://my-flow.fr/comment-devenir-developpeur-specialise-symfony/frameworks-php/symfony/",
+      author : "Michael Le Hoang - My Flow",
+      screenShot: "/flow.png",
+      summary: "Les missions, les compétences et les formations pour devenir développeur spécialisé Symfony."
+    },
+    {
+      id: 3,
       title: "Twig 4 : Les Attendus",
       date: "15 Mai 2024",
       source: "https://www.itefficience.com/article/twig-4-ce-que-lon-pourrait-attendre",
@@ -20,7 +29,7 @@ const veilleInfos = [
       summary: "Twig 4 : Ce que l'on pourrait attendre"
     },
     {
-      id: 3,
+      id: 4,
       title: "Meilleurs bundles Symfony",
       date: "16 Mai 2024",
       source: "https://www.itefficience.com/article/les-bundles-les-plus-utilises-dans-les-projets-symfony",
@@ -29,7 +38,7 @@ const veilleInfos = [
       summary: "Les bundles les plus utilisés dans les projets Symfony."
     },
     {
-      id: 4,
+      id: 5,
       title: "Symfony 7.2.4 released",
       date: "26 Février 2025",
       source: "https://symfony.com/blog/symfony-7-2-4-released",

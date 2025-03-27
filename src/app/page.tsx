@@ -65,7 +65,7 @@ export default function Home() {
         Bienvenue sur mon Portfolio !
       </h1>
       <p className="text-lg text-gray-600 mt-4 max-w-2xl">
-        Bonjour ! Je m&apos;appelle Steven Le Cam, j&apos;ai 20 ans et je suis
+        Bonjour ! Je m&apos;appelle Steven Le Cam, j&apos;ai 21 ans et je suis
         développeur full-stack. Passionné par le développement web, j&apos;ai
         réalisé quelques travaux que j&apos;aimerais vous montrer et vous
         expliquer. Mon portfolio met en avant mes projets, qui illustrent mon
@@ -81,7 +81,7 @@ export default function Home() {
 
       {/* Bouton de téléchargement du CV */}
       <Link
-        href="/LeCamStevenCV.pdf"
+        href="/Le_Cam_Steven_CV.pdf"
         className="relative bg-blue-400 px-6 py-3 my-4 text-lg font-semibold text-white rounded-lg overflow-hidden group transition-all duration-500"
       >
         <span className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left bg-gradient-to-r from-blue-500 to-blue-400 transition-transform duration-500 ease-out"></span>
